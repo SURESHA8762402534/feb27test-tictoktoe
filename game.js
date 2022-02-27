@@ -23,9 +23,9 @@ class Game extends React.Component{
         const Current = history[history.length-1];
         const squares = Current.squares.slice();
         const winner = calculatewinner(squares);
-        if(winner || squares[i]){
-            return;
-        }
+        // if(winner || squares[i]){
+        //     return;
+        // }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             history : history.concat({
@@ -47,7 +47,7 @@ class Game extends React.Component{
             
                 <li key={move}>
 
-                <button onClick={()=>{this.jumpTo(move)}}>{desc}</button> 
+                <button className="ul" onClick={()=>{this.jumpTo(move)}}>{desc}</button> 
                 
                 </li>
                 
@@ -74,7 +74,7 @@ class Game extends React.Component{
             </div>
 
             <div className="game-info">
-                <ul>{status}</ul>
+                <ul id="win">{status}</ul>
                 <ul>{moves}</ul>
             </div>
       </div>

@@ -1,38 +1,30 @@
-body{
-    background-color: violet;
-}
 h1{
     text-align: center;
-    font-size: 40px;
-}
-
-.square{
-    background: rgb(130, 159, 196);
-    border: 2px solid rgb(10, 10, 10);
-    float: left;
-    margin-top: -10px;
-    margin-right: -10px;
-    padding: 0;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 80px;
-    box-shadow: 0 0 10px 0 black;
+    text-decoration: underline;
     
 }
-.square:focus{
-    outline: none;
-}
-.borde-row:after{
-    clear: both;
-    content: "";
-    display: flex;
 
-}
+ .board-row {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 0px;
+    background-color: yellow;
+    width: 300px;
+    margin: 200px 100px 200px 50px;
+  }
+  
+  .square {
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: antiquewhite;
+    text-align: center;
+    border-radius: 10px;
+  }
 
-.game{
+  .game{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -42,12 +34,17 @@ h1{
     flex-wrap: wrap;
     margin: 50px auto;
 }
-ul {
-    padding-left: 30px; 
- }
- .game-info{
-     margin-left: 100px;
- }
- .status{
-     margin-bottom: 20px;
- }
+
+.game-info{
+    margin-left: 100px;
+    margin-top: 200px;
+}
+.ul{
+    padding: 3px;
+    margin: 5px;
+}
+#win{
+    color: blue;
+    font-size: 25px;
+    font-weight: 500;
+}
