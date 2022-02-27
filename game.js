@@ -23,9 +23,9 @@ class Game extends React.Component{
         const Current = history[history.length-1];
         const squares = Current.squares.slice();
         const winner = calculatewinner(squares);
-        // if(winner || squares[i]){
-        //     return;
-        // }
+         if(winner || squares[i]){
+             return;
+         }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             history : history.concat({
