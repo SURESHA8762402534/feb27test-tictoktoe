@@ -24,7 +24,7 @@ class Game extends React.Component{
         const squares = Current.squares.slice();
         const winner = calculatewinner(squares);
          if(winner || squares[i]){
-             return;
+             return alert("Game over click on start game start again");
          }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
